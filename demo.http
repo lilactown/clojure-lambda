@@ -1,0 +1,13 @@
+# -*- restclient -*-
+:server=https://k8efdele64.execute-api.us-east-1.amazonaws.com/dev/
+# GET endpoint
+GET :server
+
+# POST endpoitn
+POST :server
+Content-Type: application/json
+
+{
+  "firstName": "Acton",
+  "lastName": "Will"
+}
