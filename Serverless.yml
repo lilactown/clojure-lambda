@@ -51,7 +51,7 @@ package:
 
 functions:
   greet:
-    handler: demoaws.core
+    handler: demoaws.core.Greet
     events:
       - http:
           path: /
