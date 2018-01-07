@@ -4,16 +4,19 @@
             [clojure.java.io :as io]
             [compojure.core :refer :all]
             [compojure.route :as route]
-            [demoaws.lambda :refer [deflambda]]
-            [demoaws.middleware :refer [ring-adapter simple-logger]]))
+            [demoaws.lambda :refer [gen-lambda]]
+            [demoaws.middleware :refer [ring-adapter simple-pprint-adapter]]))
 
 (defroutes app
   (GET "/" [] "<h1>Hello World</h1>")
   (POST "/" [] "<h1>Hello POST</h1>")
   (route/not-found "<h1>Page not found</h1>"))
 
-;; TODO: figure out how to combine middleware lol
+(def handler
+  (-> app
+      ring-adapter
+      simple-pprint-adapter))
 
-(deflambda app
-  {:name demoaws.core.Greet
-   :middleware ring-adapter})
+(gen-lambda
+  handler
+  {:name demoaws.core.Greet})

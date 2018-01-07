@@ -1,0 +1,53 @@
+(ns demoaws.mock)
+
+(def http-get-event
+  {"resource" "/",
+   "body" nil,
+   "requestContext"
+   {"resourcePath" "/",
+    "protocol" "HTTP/1.1",
+    "requestTimeEpoch" 1515290348813,
+    "accountId" "460417021995",
+    "resourceId" "rc0f2zjkyf",
+    "path" "/dev/",
+    "httpMethod" "GET",
+    "requestTime" "07/Jan/2018:01:59:08 +0000",
+    "requestId" "593b0bfb-f34e-11e7-a39e-4fbda38ec64e",
+    "apiId" "k8efdele64",
+    "identity"
+    {"userAgent" "curl/7.54.0",
+     "accountId" nil,
+     "userArn" nil,
+     "cognitoAuthenticationProvider" nil,
+     "cognitoAuthenticationType" nil,
+     "cognitoIdentityId" nil,
+     "user" nil,
+     "sourceIp" "174.127.216.60",
+     "accessKey" nil,
+     "cognitoIdentityPoolId" nil,
+     "caller" nil},
+    "stage" "dev"},
+   "path" "/",
+   "httpMethod" "GET",
+   "pathParameters" nil,
+   "queryStringParameters" {"foo[]" "baz"},
+   "stageVariables" nil,
+   "isBase64Encoded" false,
+   "headers"
+   {"Via"
+    "1.1 e93b65cf89966087a2d9723b4713fb37.cloudfront.net (CloudFront)",
+    "CloudFront-Is-Tablet-Viewer" "false",
+    "User-Agent" "curl/7.54.0",
+    "X-Amz-Cf-Id"
+    "-CplXgmc1z_v_Ui2PY1c0vQEA2TymKz0Pao9ifRpgd-a8BhhZGGaLw==",
+    "X-Forwarded-Port" "443",
+    "CloudFront-Forwarded-Proto" "https",
+    "CloudFront-Is-Mobile-Viewer" "false",
+    "X-Amzn-Trace-Id" "Root=1-5a517eec-4351e052505105af7b9850a5",
+    "X-Forwarded-For" "174.127.216.60, 52.46.16.5",
+    "X-Forwarded-Proto" "https",
+    "CloudFront-Is-SmartTV-Viewer" "false",
+    "Accept" "*/*",
+    "CloudFront-Is-Desktop-Viewer" "true",
+    "Host" "k8efdele64.execute-api.us-east-1.amazonaws.com",
+    "CloudFront-Viewer-Country" "US"}})
