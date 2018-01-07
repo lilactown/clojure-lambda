@@ -1,8 +1,5 @@
 (ns demoaws.core
-  (:require [clojure.data.json :as json]
-            [clojure.string :as s]
-            [clojure.java.io :as io]
-            [compojure.core :refer :all]
+  (:require [compojure.core :refer :all]
             [compojure.route :as route]
             [demoaws.lambda :refer [gen-lambda]]
             [demoaws.middleware :refer [ring-adapter simple-pprint-adapter]]))
